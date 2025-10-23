@@ -67,12 +67,12 @@ for (let i =0; i<skills.lenght; i++) {
 	const userName = event.target.username.value;
 	const userEmail = event.target.userEmail.value; 
 	const userMessage = evetn.target.usersMessage.value;
-    });
+   
     // Log the value
 	console.log ("name; ", userName);
 	console.log ("email: ", userEmail);
 	console.log ("Message: ", userMessage);
-    
+     });
 	// Select the Messeges section
 	const messageSection = document.getElementById(Messages);
 	
