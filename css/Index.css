@@ -1,0 +1,77 @@
+ header {
+    position: sticky;
+    top: 0;
+ }
+ header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.25;
+    list-style: none;
+
+ }
+ body { 
+  background-color: greenyellow;
+  color: blue;
+  font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+section {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;       
+  border-radius: 0;
+}  
+  h1 
+  {
+   text-transform: uppercase;
+   font-weight: italic;
+  }
+    .Class-Headings 
+    { 
+      font-weight: bold;
+      font-size: 3.125rem;
+    }
+    #About 
+    {
+      margin-top: 100px;
+    }
+    #Professional-Experience 
+    {  
+     font-weight: italic;
+    }
+    .experience-header{
+        display: flex;
+        justify-content: space-between;
+        text-align: baseline;
+    }
+    .expereince-descirption {
+        justify-content: left;
+    }
+    #Connect a
+    {
+        text-decoration-line: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: .625rem;
+    }
+    #Connect ul
+    {
+        display: flex;
+        justify-content: space-evenly;
+        gap: .625rem;
+        padding: 0%;
+        list-style-type: none;
+        text-decoration: underline;
+    }
+
+    @media { min-width: 400px;}
+    header nav ul { gap: .5rem;}
+
+    @media {
+      min-width: 768px
+    }
+    @media {
+      min-width: 1024px;
+    }
