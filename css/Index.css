@@ -1,77 +1,106 @@
- header {
-    position: sticky;
-    top: 0;
- }
- header nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1.25;
-    list-style: none;
-
- }
- body { 
+/* Header styling */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+/* Navigation menu */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+/* Global body styles */
+body {
   background-color: greenyellow;
   color: blue;
   font-family: Arial, sans-serif;
 }
+/* Headings */
 h1 {
-    text-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
 }
+/* Section styles */
 section {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0;       
+  margin: 0;
+  padding: 0;
   border-radius: 0;
-}  
-  h1 
-  {
-   text-transform: uppercase;
-   font-weight: italic;
+}
+/* Custom heading class */
+.Class-Headings {
+  font-weight: bold;
+  font-size: 3.125rem;
+}
+/* About section spacing */
+#About {
+  margin-top: 100px;
+}
+/* Professional experience section */
+#Professional-Experience {
+  font-style: italic;
+}
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.experience-description {
+  text-align: left;
+}
+/* Connect section links */
+#Connect a {
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.625rem;
+}
+#Connect ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0.625rem;
+  padding: 0;
+  list-style: none;
+  text-decoration: underline;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;             
+  margin-top: 5px;       
+}
+.edit-button,
+.remove-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+.remove-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive design */
+@media (min-width: 400px) {
+  header nav ul {
+    gap: 0.5rem;
   }
-    .Class-Headings 
-    { 
-      font-weight: bold;
-      font-size: 3.125rem;
-    }
-    #About 
-    {
-      margin-top: 100px;
-    }
-    #Professional-Experience 
-    {  
-     font-weight: italic;
-    }
-    .experience-header{
-        display: flex;
-        justify-content: space-between;
-        text-align: baseline;
-    }
-    .expereince-descirption {
-        justify-content: left;
-    }
-    #Connect a
-    {
-        text-decoration-line: none;
-        font-weight: bold;
-        display: inline-block;
-        margin-bottom: .625rem;
-    }
-    #Connect ul
-    {
-        display: flex;
-        justify-content: space-evenly;
-        gap: .625rem;
-        padding: 0%;
-        list-style-type: none;
-        text-decoration: underline;
-    }
-
-    @media { min-width: 400px;}
-    header nav ul { gap: .5rem;}
-
-    @media {
-      min-width: 768px
-    }
-    @media {
-      min-width: 1024px;
-    }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+  }
+}

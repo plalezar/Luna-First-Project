@@ -1,131 +1,124 @@
-	// Message Form
-	
-	//helper function to toggle message section visibility
-	function toggleMessageSection(){
-	 const messageSection =document.getElementbyId("Messages");
-	 const MessageList= MessageSection.Queryselector("ul");
-	if (messsageList.children.length === 0){
-	messageSection.style.display= "none"
-	} else {
-	MessageSection.style.display = "block";
-	}
-	}
- // create the body element first
-let body = document.body;
-//  creat the fooster element next
-var footer = document.createElement("footer")
-// append the fooster to the boy
-body.appendChild(footer);
-// create a new Date object
-const today = new Date();
-// Get current year
-const thisYear = today.getFullYear();
-// Get current footeer element
-footer = document.querySelector("footer");
-// Create a new <p> element
-const copyright = document.createElement("p");
-// set inner html with copyright symbol for your name and year
-// <p> coppyright Pedram Lalezar 2025
-copyright.innerHTML = `\u00A9 Pedram Lalezar ${thisYear}`;
-// append <p> tot he footer
-footer.appendChild(copyright);
-// center the footer
-footer.style.textAlign = "Center";
-
-// skills
-// List your technical skills
-const skills = ["JavaScript", "HTML", "CSS"];
-// Select the Skills section by id
-const skillsSection = document.getElementById("Skills");
-// Select the Empty <ul> inside the skills section
-const skillsList = skillsSection.querySelector("ul");
-// loop through the Skills array
-for (let i =0; i<skills.lenght; i++) {
-    //create a new <li> element
-    const skills = document.createElement("li");
-    // set the text of each li to the current skill
-    skills.innerText = skills(li);
-    //append the <li> to the skills list
-    skillsList.appendChild(skill);
+// Helper function to toggle message section visibility
+function toggleMessageSection() {
+  const messageSection = document.getElementById("Messages");
+  const messageList = messageSection.querySelector("ul");
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none";
+  } else {
+    messageSection.style.display = "block";
+  }
 }
-// skills.forEach(skill =>{ 
-    // create a new <li> element
-    // const skills = document.createElement("li");
-    // set the text of each li to the current skill
-    // skills.innerText = skills(li);
-    // append the <li> to the skills list
-    // skillsList.appendChild(skill);})
-// Select the leave message for by name
-	const messageForm = document.quarySelector (form[name="leave_Messages"]);
-	
-	// add an event listener to handle "submit"
-	messsageFrom.addEventListener ("submit", function(event) {
-	// prevent page refresh
-	event.preventdefault();
-    
-	// retrieve form fiel values
-	const userName = event.target.username.value;
-	const userEmail = event.target.userEmail.value; 
-	const userMessage = evetn.target.usersMessage.value;
-   
-    // Log the value
-	console.log ("name; ", userName);
-	console.log ("email: ", userEmail);
-	console.log ("Message: ", userMessage);
-     });
-	// Select the Messeges section
-	const messageSection = document.getElementById(Messages);
-	
-	// select the <ul> inside the messages section
-	const messageList = messageSection.queryselector("ul");
-	
-	// Create a new list item 
-	const newMessage = document.createElement("li");
-	
-	// set the inner HTML"
-	newMessage.innerHTML = <a href="mailto$(userEmail)">$(username)</a>; <span>$(userMEssage)</span>
-	editbutton.innerText = "edit";
-	editbutton.className = "edit-button";
-	editbutton.type = "button";
-	// update the message
-	if (newText !==null) { messageSpan.inneText = newText
-	
-	// add click Listener to edit the message 
-	editButton.addEventListener("Click", function() {
-	const messageSpan = newMessage.queryselector("span");
-	//prompt the user for new message 
-    const newtext = Prompt("Edit your message; ", messageSpan.innerText);
-	});
-	
-	//append the edit button to the new message 
-	newMessage.appendChild(editbutton);B
-	
-	//create an edit button = document.createElement("button")
-	
-	// create a remove button
-	
-	const removeButton = document.creatElement("button");
-	removeButton.innerText = "remove";
-	removeButton.className = "remove-bin";
-	removeButton.type = "button";
-	
-	// Add Clcik event listener to remove the message
-	removeButton.addEventListener ("click", function() {
-	// find the <li>
+// Create and append footer
+let body = document.body;
+let footer = document.createElement("footer");
+body.appendChild(footer);
+const today = new Date();
+const thisYear = today.getFullYear();
+const copyright = document.createElement("p");
+copyright.innerHTML = `&copy; Pedram Lalezar ${thisYear}`;
+footer.appendChild(copyright);
+footer.style.textAlign = "center";
+// Skills
+const skills = ["JavaScript", "HTML", "CSS"];
+const skillsSection = document.getElementById("Skills");
+const skillsList = skillsSection.querySelector("ul");
+for (let i = 0; i < skills.length; i++) {
+  const skillItem = document.createElement("li");
+  skillItem.innerText = skills[i];
+  skillsList.appendChild(skillItem);
+}
+// Message form
+const messageForm = document.querySelector('form[name="leave_Messages"]');
+const messageSection = document.getElementById("Messages");
+const messageList = messageSection.querySelector("ul");
+messageForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const userName = event.target.userName.value;
+  const userEmail = event.target.userEmail.value;
+  const userMessage = event.target.userMessage.value;
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = `<a href="mailto:${userEmail}">${userName}</a> <span>${userMessage}</span>`;
+  // Edit button
+  const editButton = document.createElement("button");
+  editButton.innerText = "Edit";
+  editButton.className = "edit-button";
+  editButton.type = "button";
+  editButton.addEventListener("click", function () {
+    const messageSpan = newMessage.querySelector("span");
+    const newText = prompt("Edit your message:", messageSpan.innerText);
+    if (newText !== null) messageSpan.innerText = newText;
+  });
+  // Append the button to the new message\
+  newMessage.appendChild(editButton);
+  // Remove button
+  const removeButton = document.createElement("remove-button");
+  removeButton.innerText = "Remove";
+  removeButton.className = "remove-button";
+  removeButton.type = "button";
+  // Add click event listener to remove the message
+  removeButton.addEventListener("click", function () {
+    // Find the <Li>
 	const entry = removeButton.parentNode;
-	// remove it 
-	entry.remove();
-	});
-	// Append the remove button to the new message
-	newMessage.appendChild(removebutton);
-	
-	// Append the new message tot he message list
-	messagelist.appendChild(newMessage);
-	
-		// initiall hide the messages section (we start out with 0 messages) toggle if exists a new message
-	toggleMessageSection();
-	
-	
-	//clear the form after submission
-	messageForm.reset();
-	};
+	// Remove it from the DOM
+    entry.remove();
+    toggleMessageSection();
+  });
+  // Append the remove button to the new message
+  newMessage.appendChild(removeButton);
+  // Append a new message to the message list
+  messageList.appendChild(newMessage);
+  // Show sectionif a new message is added
+  toggleMessageSection();
+  // Clear form after submission
+  messageForm.reset();
+});
+// make a container for remov and edit
+const buttonContainer = document.createElement("div");
+buttonContainer.className = "button-container";
+const editButton = document.getElementById("button");
+const removeButton = document.getElementById("remove-button");
+
+//-------Project Section------
+// Fetch your Githup repositories
+fetch("https://api.github.com/users/jsangsrichan/repos")
+.then ((response)=> {
+// error fetching Data
+if(!response.OK){
+// throw an error
+throw new Error("failed to fetch the data from github, Please try again later.");
+}
+
+// return the response Json data
+return response.json();
+})
+.then ((repositories)=> {
+// repositories = JSON.parse(this.repositories);
+console.log("repositories: ". repositories);
+// get the roject section
+const projectSection = document.getElementsById("projects");
+// select th list hwitin the Projects Section
+const projectList = projectSection.querySelector("ul");
+// Clear the Cintent just in case
+projectList.innerHTML="";
+//itterate throw all the piblic repositories
+repositories.forEach((repo) => {
+// create a new list item
+const project=document.createElement("li");
+//create a link for the list item
+const link = document.createElement("a");
+// set the link url
+link.href = repositories[i].html_url;
+// set the tex for the link
+WakeLockSentinel.textContent = repo.name;
+});
+})
+.catch ((error)=> {
+// Log Error
+console.error("Error fetching repositories", error);
+// Get the projects section
+const projectSection = document.getElementById("projects");
+// add an error message on the ul
+const errorMessage = document.createElement("p");
+errorMessage.innerHTML = `unalbe to load projects. Please try again later.`;
+projectSection.appendChild(errorMessage);
+});
