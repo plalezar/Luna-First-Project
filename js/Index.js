@@ -1,14 +1,16 @@
-// Helper function to toggle message section visibility
+// Message Form
+
+//helper function to toggle message section visibility
 function toggleMessageSection() {
-  const messageSection = document.getElementById("Messages");
-  const messageList = messageSection.querySelector("ul");
-  if (messageList.children.length === 0) {
-    messageSection.style.display = "none";
-  } else {
-    messageSection.style.display = "block";
-  }
+	const messageSection = document.getElementbyId("Messages");
+	const MessageList = MessageSection.Queryselector("ul");
+	if (messsageList.children.length === 0) {
+		messageSection.style.display = "none"
+	} else {
+		MessageSection.style.display = "block";
+	}
 }
-// Create and append footer
+// create the body element first
 let body = document.body;
 let footer = document.createElement("footer");
 body.appendChild(footer);
@@ -22,10 +24,14 @@ footer.style.textAlign = "center";
 const skills = ["JavaScript", "HTML", "CSS"];
 const skillsSection = document.getElementById("Skills");
 const skillsList = skillsSection.querySelector("ul");
-for (let i = 0; i < skills.length; i++) {
-  const skillItem = document.createElement("li");
-  skillItem.innerText = skills[i];
-  skillsList.appendChild(skillItem);
+// loop through the Skills array
+for (let i = 0; i < skills.lenght; i++) {
+	//create a new <li> element
+	const skills = document.createElement("li");
+	// set the text of each li to the current skill
+	skills.innerText = skills(li);
+	//append the <li> to the skills list
+	skillsList.appendChild(skill);
 }
 // Message form
 const messageForm = document.querySelector('form[name="leave_Messages"]');
